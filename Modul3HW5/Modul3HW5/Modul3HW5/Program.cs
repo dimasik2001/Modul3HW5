@@ -26,10 +26,10 @@ namespace Modul3HW5
             return string.Join(' ', await Task.WhenAll(taskList));
         }
 
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
-            var str = Concat().GetAwaiter().GetResult();
-            Console.WriteLine("Main:");
+            var str = await Concat();
+            Console.WriteLine("Concat result:");
             Console.WriteLine(str);
         }
     }
